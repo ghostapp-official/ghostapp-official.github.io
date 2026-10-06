@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost | Hesap ve Veri Silme Talebi (Account Deletion)</title>
+  <meta name="description" content="Ghost uygulaması hesap ve ilişkili veri silme talep sayfası. Google Play ve App Store standartlarına uygundur.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: #12151d;
+      --card-border: #1f2533;
+      --text: #f0f3f8;
+      --text-muted: #8b95a8;
+      --cyan: #00f5d4;
+      --pink: #f72585;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 24px 18px; }
+    }
+    .back-link {
+      display: inline-block;
+      color: var(--cyan);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    .info-card {
+      background: rgba(247, 37, 133, 0.06);
+      border: 1px solid rgba(247, 37, 133, 0.25);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+    .info-card h3 {
+      color: var(--pink);
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .info-card ul {
+      margin-left: 20px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+    .step-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+    .step-box h2 {
+      font-size: 18px;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+    .step-box p, .step-box li {
+      font-size: 14px;
+      color: #c9d2e0;
+    }
+    .step-box ol {
+      margin-left: 20px;
+      margin-top: 8px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #e2e8f0;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: #090a0f;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--cyan);
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--pink);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-submit:hover {
+      opacity: 0.9;
+    }
+    .footer-note {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Ana Sayfaya Dön</a>
+    <h1>Ghost Hesap & Veri Silme Talebi</h1>
+    <p class="subtitle">Google Play Store & Apple App Store Veri Güvenliği Politikası Uyarınca Hazırlanmıştır.</p>
+
+    <div class="info-card">
+      <h3>⚠️ Silme İşlemi Neleri Kapsar?</h3>
+      <ul>
+        <li>Google hesabınızla ilişkili oturum belirteçleri ve bağlantılar kalıcı olarak koparılır.</li>
+        <li>Ghost üzerinde paylaştığınız tüm fısıltılar, ses kayıtları ve yanıtlar veritabanından kalıcı olarak silinir.</li>
+        <li>Oylarınız, yer imleriniz ve uygulama içi envanter/köz kayıtlarınız tamamen sıfırlanır.</li>
+        <li>Bu işlem geri alınamaz.</li>
+      </ul>
+    </div>
+
+    <div class="step-box">
+      <h2>Yöntem 1: Uygulama İçinden Anında Silme (En Hızlı)</h2>
+      <p>Ghost uygulamasını kullanabiliyorsanız, herhangi bir form doldurmanıza gerek yoktur:</p>
+      <ol>
+        <li>Ghost uygulamasını açın.</li>
+        <li>Sağ alt köşeden <strong>Profilim</strong> sekmesine gelin.</li>
+        <li>Sağ üstteki <strong>Ayarlar (Dişli)</strong> simgesine dokunun.</li>
+        <li>En alttaki <strong>"Hesabımı ve Verilerimi Sil"</strong> seçeneğini seçip onaylayın.</li>
+      </ol>
+      <p style="margin-top: 8px; color: var(--cyan);"><em>İşlem anında gerçekleştirilir ve tüm verileriniz sunuculardan derhal silinir.</em></p>
+    </div>
+
+    <div class="step-box">
+      <h2>Yöntem 2: Web Üzerinden Silme Talebi Gönderme</h2>
+      <p>Uygulamayı sildiyseniz veya cihazınıza erişemiyorsanız aşağıdaki formu kullanarak silme talebinizi iletebilirsiniz:</p>
+      
+      <form id="deleteForm" onsubmit="handleFormSubmit(event)" style="margin-top: 16px;">
+        <div class="form-group">
+          <label for="email">Google Hesabı E-postanız:</label>
+          <input type="email" id="email" required placeholder="ornek@gmail.com">
+        </div>
+        <div class="form-group">
+          <label for="handle">Anonim Mahlasınız (Biliyorsanız):</label>
+          <input type="text" id="handle" placeholder="@mahlasiniz">
+        </div>
+        <div class="form-group">
+          <label for="note">Ek Açıklama (İsteğe bağlı):</label>
+          <textarea id="note" rows="3" placeholder="Örn: Uygulamayı sildim, tüm kayıtlarımın silinmesini rica ediyorum."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Hesap ve Veri Silme Talebini İlet</button>
+      </form>
+    </div>
+
+    <div class="footer-note">
+      Talepleriniz en geç 48 saat içinde incelenir ve Supabase bulut veritabanımızdan kalıcı olarak imha edilir.<br>
+      Doğrudan destek: <a href="mailto:contact.ghostapp@gmail.com" style="color: var(--cyan);">contact.ghostapp@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const handle = document.getElementById('handle').value.trim();
+      const note = document.getElementById('note').value.trim();
+
+      const subject = encodeURIComponent('Ghost - Hesap ve Veri Silme Talebi: ' + email);
+      const body = encodeURIComponent(
+        'Merhaba Ghost Ekibi,\n\n' +
+        'Ghost hesabımdaki tüm verilerin ve içeriklerin kalıcı olarak silinmesini talep ediyorum.\n\n' +
+        'E-posta: ' + email + '\n' +
+        'Mahlas: ' + (handle || 'Belirtilmedi') + '\n' +
+        'Ek Not: ' + (note || 'Yok') + '\n\n' +
+        'Saygılarımla.'
+      );
+
+      window.location.href = 'mailto:contact.ghostapp@gmail.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+</body>
+</html>
